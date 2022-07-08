@@ -17,15 +17,15 @@ const Workshop = ({workshop}:{workshop?: WorkshopT}) => {
     const [_workshop, setWorkshop] = useState<WorkshopT>(()=>(workshop!=null)?workshop:workshopDefault);
 
     const fetchWorkshop = async() => {
-        let data = await fetchData(`https://locastic-server.herokuapp.com/workshops/${workshopID}`);
+        let data = await fetchData(`https://brunogrbavac-tinel.herokuapp.com/workshops/${workshopID}`);
         setWorkshop(data);
         fetchSimilarWorkshops(data);
         setLoading(false);
     };
 
     const fetchSimilarWorkshops = async(ws: WorkshopT) => {
-        console.log(`http://localhost:3000/workshops?&_limit=${WS_SIMILAR_LIMIT}&_sort=date&_order=desc&title_ne=${ws.title}&category=${ws.category}`);
-        let data = await fetchData(`http://localhost:3000/workshops?&_limit=${WS_SIMILAR_LIMIT}&_sort=date&_order=desc&title_ne=${ws.title}&category=${ws.category}`);
+        console.log(`https://brunogrbavac-tinel.herokuapp.com/workshops?&_limit=${WS_SIMILAR_LIMIT}&_sort=date&_order=desc&title_ne=${ws.title}&category=${ws.category}`);
+        let data = await fetchData(`https://brunogrbavac-tinel.herokuapp.com/workshops?&_limit=${WS_SIMILAR_LIMIT}&_sort=date&_order=desc&title_ne=${ws.title}&category=${ws.category}`);
         setWorkshopsSimilar(data);
     };
 

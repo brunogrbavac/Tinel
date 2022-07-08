@@ -20,13 +20,13 @@ const Workshops = () => {
     const [categoriesFetched, setCategoriesFetched] = useState<string[]>(()=>[" "]);
 
     const fetchWorkshops = async() => {
-        let data = await fetchData(`http://localhost:3000/workshops?&_limit=${WS_PER_PAGE*page}&_sort=date&_order=desc${(filter!="All")?`&category=${filter.toLowerCase()}`:""}`);
+        let data = await fetchData(`https://brunogrbavac-tinel.herokuapp.com/workshops?&_limit=${WS_PER_PAGE*page}&_sort=date&_order=desc${(filter!="All")?`&category=${filter.toLowerCase()}`:""}`);
         setWorkshopsFetched(data);
         setLoading(false);
     };
 
     const fetchCategories = async() => {
-        let data = await fetchData(`http://localhost:3000/categories`);
+        let data = await fetchData(`https://brunogrbavac-tinel.herokuapp.com/categories`);
         setCategoriesFetched(data);
     };
 

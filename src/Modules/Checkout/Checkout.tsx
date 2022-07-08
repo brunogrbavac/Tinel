@@ -41,7 +41,7 @@ const Checkout = () => {
             total: total,
         };
 
-        let data = await postData(`http://localhost:3000/orders`, toSend);
+        let data = await postData(`https://brunogrbavac-tinel.herokuapp.com/orders`, toSend);
         dispatch(reset());
         dispatch(toggleCheckout());
         dispatch(toggleSuccess());

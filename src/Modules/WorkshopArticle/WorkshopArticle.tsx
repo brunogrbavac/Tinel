@@ -13,7 +13,7 @@ const WorkshopArticle = ({workshop}:{workshop:Workshop}) => {
     const [author, setAuthor] = useState<User>(()=>userDefault);
     
     const fetchAuthor = async() => {
-        let data = await fetchData(`http://localhost:3000/users/${workshop.userId}`);
+        let data = await fetchData(`https://brunogrbavac-tinel.herokuapp.com/users/${workshop.userId}`);
         setAuthor(data);
     };
 
