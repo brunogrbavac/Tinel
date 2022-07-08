@@ -1,0 +1,31 @@
+@import '../../config';
+
+.workshops-filter-option{
+    @include font-fsw(Livvic, 23px, 700);
+    margin: 0 0 25px 25px !important ;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    @include md{
+        display: inline;
+        margin: 0 0 25px 0 !important ;
+    };
+};
+
+.workshops-filter-option:hover{
+    transform: scale(1.03);
+};
+
+.wfo-blue{
+    color: $secondary-color;
+};
+
+.option-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    @include md{
+        display: none;
+    };
+};

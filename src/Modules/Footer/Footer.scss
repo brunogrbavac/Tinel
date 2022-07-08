@@ -1,0 +1,14 @@
+@import '../../config';
+
+.footer{
+    @include flex-dja(row, flex-start,center);
+    background: rgba(127, 127, 127, 0.1);
+    height: 80px;
+    width: 100%;
+
+    p{
+        @include font-fsw(Livvic, 15px, 600 );
+        margin-left: 80px;
+        color: $lightgrey;
+    };
+};

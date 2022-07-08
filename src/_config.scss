@@ -1,0 +1,103 @@
+$primary-color: #FFCE25;
+$secondary-color: #0097CC;
+$grey-border-color: #F2F2F2;
+$lightgrey: #7F7F7F;
+$grey-padding: #C4C4C4;
+
+$breakpoint-sm-max: 600px;
+$breakpoint-md-max: 900px;
+$breakpoint-lg-max: 1200px;
+$breakpoint-xl-max: 1500px;
+
+@mixin noScrollbar {
+    overflow-y: scroll;
+    scrollbar-width: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    };
+};
+
+@mixin keyframesSCSS($animation-name) {
+    @-webkit-keyframes #{$animation-name} {@content;};
+    @keyframes #{$animation-name} {@content;};
+};
+
+@mixin animationSCSS($animation-name, $animation-time, $animation-delay) {
+    -webkit-animation: $animation-name $animation-time ;
+    -webkit-animation-delay: $animation-delay;
+    animation: $animation-name $animation-time ;
+    animation-delay: $animation-delay;
+};
+
+@mixin height-fill-available {
+    height: fill-available;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
+};
+
+@mixin width-fill-available {
+    width: fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+};
+
+@mixin shadow12160 {
+    box-shadow: 1px 2px 16px 0px #7F7F7F59;
+};
+
+@mixin shadow128 {
+    box-shadow: 1px 2px 8px #7f7f7f40;
+};
+
+@mixin shadow-1-216 {
+    box-shadow: -1px -2px 16px #7f7f7f40;
+};
+
+@mixin flex-dja ($direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+};
+
+@mixin font-fsw ($family, $size, $weight) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+//Media mixins for responsive.
+
+@mixin sm {
+    @media (max-width: #{$breakpoint-sm-max}) {
+        @content;
+    }
+}
+ 
+@mixin md {
+    @media (max-width: #{$breakpoint-md-max}) {
+        @content;
+    }
+}
+ 
+@mixin lg {
+    @media (max-width: #{$breakpoint-lg-max}) {
+        @content;
+    }
+}
+ 
+@mixin xl {
+    @media (max-width: #{$breakpoint-xl-max}) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: #{$breakpoint-xl-max}) {
+        @content;
+    }
+}

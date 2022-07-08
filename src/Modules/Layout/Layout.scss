@@ -1,0 +1,13 @@
+@import '../../config';
+
+.layout{
+    max-width: 100%;
+    margin-top: 90px;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    
+    @include md {
+        margin-top: 60px;
+    };
+};

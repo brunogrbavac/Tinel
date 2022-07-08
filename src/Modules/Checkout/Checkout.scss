@@ -1,0 +1,99 @@
+@import '../../config';
+
+.checkout-container{
+    @include flex-dja(column, center, flex-start);
+    padding: 0 95px;    
+    box-sizing: border-box;
+
+    @include md{
+        padding:  0 40px;
+    };
+};
+
+.checkout-title-close{
+    @include flex-dja(row, flex-start, flex-start);
+    width: 100%;
+    margin: 85px 0 45px 0;    
+};
+
+.checkout-title{
+    flex: 1;
+    text-align: left;
+
+    h1{
+        @include font-fsw(Livvic, 40px, 700);
+    };
+
+    p{
+        @include font-fsw(Livvic, 15px, 500);
+        color: $lightgrey;
+    };
+};
+
+.checkout-close{
+    flex: 1;
+    text-align: right;
+    cursor: pointer;
+
+    img{
+        width: 32px;
+        height: 32px;
+    };
+};
+
+.checkout-form{
+    @include flex-dja(column, center, flex-start);
+    text-align: left;
+    width: 100%;
+};
+
+.checkout-date-gender{
+    @include flex-dja(row, flex-start, center);
+    width: 100%;
+    @include md{
+        @include flex-dja(column, flex-start, center);
+        div{
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        };
+    };
+
+    #checkout-d1{
+        margin-right: 20px;
+        flex: 1;
+    };
+    #checkout-d2{
+        margin-left: 20px;
+        flex: 1;
+    };
+};
+
+#checkout-agree{
+    @include flex-dja(row, flex-start, center);
+
+    input{
+        margin: 0;
+        display: inline;
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        cursor: pointer;
+    };
+};
+
+#checkout-submit{
+    @include font-fsw(Livvic, 18px, 700);
+    height: 60px;
+    width: 170px;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 6px;
+    margin: 20px 0 100px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+};
+
+#checkout-submit:hover{
+    transform: scale(1.02);
+};

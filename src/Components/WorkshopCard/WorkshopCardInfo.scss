@@ -1,0 +1,106 @@
+@import '../../config';
+
+.card-info{
+    @include flex-dja(column, center, flex-start);
+    height: 210px;
+    position: relative;
+    margin: 20px 40px 40px 40px;
+    @include md {
+        height: 110px;
+        margin: 20px 20px 20px 30px;
+    };
+};
+
+.card-stamp{
+    @include font-fsw(Livvic, 15px, 700);
+    display: inline-flex;
+    margin: 0;
+    @include md {
+        @include font-fsw(Livvic, 13px, 700);
+    };
+
+    img{
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    };
+};
+
+#card-timestamp{
+    margin-left: 15px;
+    @include md {
+        margin-left: 10px;
+    };
+};
+
+#card-title{
+    @include font-fsw(Livvic, 27px, 700);
+    margin: 20px 0;
+    line-height: 100%;
+    text-align: left;
+    color: $secondary-color;
+    flex-grow: 1;
+    
+    @include md {
+        @include font-fsw(Livvic, 20px, 700);
+        margin: 10px 0 20px 0;
+    };
+};
+
+#card-price{
+    @include font-fsw(Livvic, 29px, 700);
+    margin: 0;
+    @include md {
+        @include font-fsw(Livvic, 20px, 700);
+    };
+};
+
+#card-currency{
+    @include font-fsw(Livvic, 15px, 700);
+    margin-left: 5px;
+    @include md {
+        @include font-fsw(Livvic, 13.5px, 700);
+    };
+};
+
+#card-buy-button{
+    @include font-fsw(Livvic, 18px, 700);
+    @include shadow128;
+    background-color: $primary-color;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    transition: all 0.3s ease;
+    @include md {
+        display: none;
+    };
+};
+
+#card-buy-button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+};
+
+#card-buy-button-no-text{
+    @include shadow128;
+    display: none;
+    transition: all 0.3s ease;
+    @include md{
+        display: block;
+        background-color: $primary-color;
+        border-radius: 6px;
+        border: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    };
+};
+
+#card-buy-button-no-text:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+};

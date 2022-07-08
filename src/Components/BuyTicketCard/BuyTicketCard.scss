@@ -1,0 +1,114 @@
+@import '../../config';
+
+.ticket-block{
+    @include flex-dja(column, flex-start, flex-start);
+    @include shadow12160;
+    width: 360px;
+    height: 320px;
+    box-sizing: border-box;
+    padding: 50px 40px;
+    border-radius: 6px;
+    background-color: white;
+
+    @include md{
+        @include flex-dja(row, space-evenly, center);
+        width: 100vw;
+        height: 80px;
+    };
+};
+
+#ticket-title{
+    @include font-fsw(Livvic, 27px, 700);
+    line-height: 100%;
+    text-align: left;
+    margin: 0 0 30px 0;
+    @include md {
+        display: none;
+    };
+};
+
+#ticket-price{
+    margin: 0 0 35px 0;
+    @include font-fsw(Livvic, 40px, 700);
+    @include md {
+        @include font-fsw(Livvic, 20px, 700);
+        margin: 0;
+    };
+};
+
+#ticket-currency{
+    @include font-fsw(Livvic, 23px, 700);
+    margin-left: 5px;
+    @include md {
+        @include font-fsw(Livvic, 13.5px, 700);
+        margin-left: 0;
+    };
+};
+
+#ticket-select-buy{
+    @include flex-dja(row, flex-start, flex-start);
+    @include md{
+        @include flex-dja(row, flex-start, flex-start);
+        flex-grow: 1;
+    };
+
+    select{
+        @include font-fsw(Livvic, 23px, 700);
+        height: 60px;
+        width: 80px;
+        margin-right: 15px;
+        border: $secondary-color 1px solid;
+        padding: 0 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        @include md{
+            height: 45px;
+            margin: 0 20px 0 20px;
+        };
+
+        option{
+            @include font-fsw(Livvic, 23px, 700);
+            @include md{
+                @include font-fsw(Livvic, 18px, 700);
+            };
+        };
+    };
+};
+
+#ticket-add-subtotal{
+    @include flex-dja(column, center, flex-start);
+    @include md{
+        flex-grow: 1;
+    };
+
+    button{
+        @include font-fsw(Livvic, 18px, 700);
+        height: 60px;
+        width: 180px;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        @include md{
+            @include font-fsw(Livvic, 14px, 700);
+            height: 45px;
+            width: 140px;
+            margin: 0;
+            width: 100%;
+        };
+    };
+
+    button:hover{
+        transform: scale(1.03);
+        cursor: pointer;
+    };
+
+    p{
+        @include font-fsw(Livvic, 15px, 600);
+        margin: 10px 0 0 0;
+        color: $lightgrey;
+        @include md{
+            display: none;
+        };
+    };
+};

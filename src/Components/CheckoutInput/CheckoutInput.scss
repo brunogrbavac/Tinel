@@ -1,0 +1,33 @@
+
+@import '../../config';
+
+.checkout-input{
+    @include font-fsw(Livvic, 18px, 500);
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-bottom: 1px solid $lightgrey;
+    border-radius: 6px 6px 0 0;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 5px 0 35px 0;
+};
+
+.checkout-input-error{
+    border-bottom: 2px solid red;
+};
+  
+.checkout-input:focus{
+    outline: none;
+    background: rgba(127, 127, 127, 0.1);
+};
+
+.checkout-label{
+    @include font-fsw(Livvic, 15px, 700);
+    @include flex-dja(row, space-between, center);
+    width: 100%;
+};
+
+.checkout-error-label{
+    color: red;
+};

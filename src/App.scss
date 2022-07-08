@@ -1,0 +1,24 @@
+@import './config';
+
+.App {
+  @include flex-dja(column, flex-start, flex-start);
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  font-family: Livvic !important;
+  background-color: white;
+  line-height: 125%;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  a{
+    text-decoration: none;
+    color: black;
+  };
+
+  .loading{
+    margin: 15rem auto 0 auto ;
+  };
+
+};

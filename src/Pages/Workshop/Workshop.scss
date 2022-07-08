@@ -1,0 +1,86 @@
+@import '../../config';
+
+.workshop{
+    @include flex-dja(column, flex-start, center);
+    width: 100%;
+};
+
+.workshop-back{
+    @include flex-dja(row, flex-start, center);
+    @include font-fsw(Livvic, 15px, 700);
+    min-width: 400px;
+    width: 400px;
+    padding: 65px 0 0 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    @include lg{
+        padding: 30px 0 30px 20px;
+    };
+
+    img{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    };
+};
+
+.workshop-back:hover{
+    transform: scale(1.03);
+};
+
+.workshop-top{
+    @include flex-dja(row, flex-start, flex-start);
+    width: 100%;
+    margin: 0 0 80px 0;
+
+    @include lg{
+        @include flex-dja(column, flex-start, flex-start);
+        margin: 0 0 40px 0;
+    };
+};
+
+.workshop-bottom{
+    @include flex-dja(row, flex-start, flex-start);
+    width: 100%;
+    background: rgba(127, 127, 127, 0.1);
+  
+    @include lg{
+        @include flex-dja(column, flex-start, center);
+    };
+};
+
+#similar-workshops{
+    @include flex-dja(column, flex-start, flex-start);
+    width: 100%;
+
+    @include lg{
+        box-sizing: border-box;
+        padding: 45px 25px 0 25px;
+    };
+
+    @include md{
+        box-sizing: border-box;
+        padding: 45px 0 0 0;
+    };
+};
+
+#workshop-similar-title{
+    @include font-fsw(Livvic, 40px, 700);
+    margin: 85px 0 45px 0;
+
+    @include lg{
+        @include font-fsw(Livvic, 32px, 700);
+        margin: 0 0 30px 0;
+    };
+
+    @include md{
+        @include font-fsw(Livvic, 32px, 700);
+        margin: 0 25px 30px 25px;
+    };
+};
+
+#workshop-lb{
+    @include lg{
+        display: none;
+    };
+};

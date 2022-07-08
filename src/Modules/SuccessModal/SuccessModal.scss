@@ -1,0 +1,91 @@
+@import '../../config';
+
+.success-modal-back {
+    @include noScrollbar;
+    position: fixed;
+    z-index: 15;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+};
+
+.success-modal {
+  background-color: white;
+  margin: 10% auto;
+  border: none;
+  width: 760px;
+  height: 380px;
+  padding: 90px;
+  border-radius: 16px;
+    box-sizing: border-box;
+    @include flex-dja(column, center, flex-start);
+  @include md{
+    @include flex-dja(column, center, center);
+    padding: 30px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 16px 16px 0 0;
+
+  };
+};
+
+.success-modal-content{
+    @include flex-dja(column, flex-start, flex-start);
+    width: 50%;
+    @include md{
+        @include flex-dja(column, center, flex-start);
+        width: 100%;   
+        height: 50%;  
+        margin-bottom: 0;
+        margin-top: auto;   
+    };
+
+    a{
+        @include md{
+            width: 100%;
+        };
+    };
+};
+
+.success-ty{
+    @include font-fsw(Livvic, 40px, 700);
+    margin: 0;
+
+    @include md{
+        // margin-top: 100%;
+    }
+};
+
+.success-msg{
+    @include font-fsw(Livvic, 15px, 500);
+    margin: 40px 0;
+    text-align: left;
+
+    @include md{
+        flex-grow:1;
+    }
+};
+
+.success-btn{
+    @include font-fsw(Livvic, 18px, 700);
+    width: 200px;
+    height: 60px;
+    background-color: $primary-color;
+    border:none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @include md{
+        width: 100%;
+        margin: auto auto 20px auto;
+    };
+};
+
+.success-btn:hover{
+    transform: scale(1.03);
+};

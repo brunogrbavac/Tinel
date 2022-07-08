@@ -1,0 +1,72 @@
+@import '../../config';
+
+.card{
+    @include flex-dja(column, center, center);
+    @include shadow12160;
+    height: 450px;
+    width: 320px;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    @include md {
+        @include flex-dja(row, center, center);
+        height: 150px;
+        width: 100%;
+        box-shadow: none;
+        border: $grey-border-color 1px solid;
+    };
+};
+
+.card:hover{
+    transform: scale(1.03);
+};
+
+.card-cover{
+    height: 180px;
+    width: 100%;
+    display: flex;
+    @include md {
+        height: 100%;
+        min-width: 0;
+    };
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        min-width: 0;
+    };
+};
+
+.card-info-container{
+    height: 270px;
+    width: 100%;
+    display: block;
+    position: relative;
+    
+    @include md {
+        height: 150px;
+        min-width: 230px;
+    };
+};
+
+#card-brush-button{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border: none;
+    border-radius: 6px;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    @include md {
+        left: -20px;
+        top: 10px;
+    };
+
+    img{
+        width: 15px;
+        height: 15px;
+    };
+};
