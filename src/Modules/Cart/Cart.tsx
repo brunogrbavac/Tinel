@@ -31,7 +31,7 @@ const Cart = () => {
             <div className="cart-and-close">
                 <img src={cart} alt="Cart"/>
                 <span>{cartItems.length} Workshops</span>
-                <img src={closeIcon} alt="Close" id="close" onClick={()=>toggleCartSidebar()}/>
+                <img src={closeIcon} alt="Close" id="close" onClick={() => toggleCartSidebar()}/>
             </div>
             <div className="cart-items">
                 {cartItems.map( item =>
